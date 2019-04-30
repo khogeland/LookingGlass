@@ -170,6 +170,7 @@ bool IVSHMEM::Initialize(PCI_DEVICE dev)
     if (dev.bus != bus || dev.addr != slot || dev.func != func) //not the right device, keep searching
     {
       free(infData);
+      devid++;
       continue;
     }
 
